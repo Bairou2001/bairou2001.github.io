@@ -1,0 +1,36 @@
+#slogan {
+  margin-bottom: 30px;
+}
+
+#center {
+  padding-top: 200px;
+}
+
+.title {
+  font-size: 2em;
+  font-family: myNotoBold;
+}
+
+.description {
+  font-size: 1.5em;
+  font-style: italic;
+  opacity: 65%;
+}
+
+.projectImage {
+  width: 100%;
+  padding: 10px;
+  opacity: 60%;
+}
+
+@media only screen and (max-width: 700px) {
+  .title {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .description {
+    font-size: 1.25em;
+    font-style: italic;
+  }
+}

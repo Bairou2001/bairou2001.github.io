@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  /*background-image: url(/images/versusBackground.jpg);*/
+  background-size: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 780px;
+  min-height: 330px;
+}
+
+main {
+  position: relative;
+  width: 90%;
+  height: 80%;
+  background-color: rgba(224, 153, 153, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.player {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.playerActive {
+  background-color: rgba(230, 220, 220, 0.35);
+}
+
+.playerName {
+  height: 10%;
+  width: 100%;
+  text-align: center;
+  color: rgb(49, 38, 38);
+  font-weight: bolder;
+}
+
+.totalScore > p {
+  margin: 5px;
+}
+
+.playerCurrent {
+  background-color: #a34262;
+  border-radius: 10px;
+  height: 30%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.playerCurrent > p {
+  font-size: smaller;
+  margin-bottom: 5%;
+}
+
+#buttons {
+  position: absolute;
+  z-index: 2;
+  /*
+  position: absolute;  
+  width: 20%;
+  height: 80%;
+  top: 15%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  transition: all 0.2s;
+}
+
+#instructions {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  background-color: rgb(185, 113, 125);
+  border-radius: 20px;
+  height: 60%;
+  width: 80%;
+  min-height: 330px;
+  min-width: 500px;
+  padding: 20px;
+  font-size: medium;
+}
+
+#instructions > h1 {
+  height: 20%;
+  font-size: large;
+}
+
+#instructions-body {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+#start {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: rgb(121, 56, 67);
+  width: 20%;
+  margin-top: 10px;
+}
+ul {
+  margin: 10px;
+}
+li {
+  font-size: 70%;
+}
+p {
+  text-align: center;
+  margin: 2px;
+  font-size: 90%;
+}
+
+#dice {
+  height: 3em;
+  border-radius: 10px;
+}
+
+.button {
+  background-color: rgba(248, 248, 248, 0.35);
+  border-radius: 30px;
+  cursor: pointer;
+  min-height: 30px;
+  min-width: 100px;
+  text-align: center;
+  margin-top: 15%;
+
+  background-color: rgb(240, 204, 204);
+  background-color: rgba(250, 232, 232, 0.6);
+  backdrop-filter: blur(20px);
+
+  padding: 6px 5px 4px 4px;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+  color: rgb(19, 17, 17);
+}
+
+#buttonDice {
+  margin-bottom: 20%;
+  margin-top: 15%;
+}
+
+.button:active {
+  transform: translate(-1%, 1px);
+  box-shadow: 2 1rem 2rem rgba(3, 3, 3, 0.15);
+}
+
+.button:focus {
+  outline: none;
+}
+.button:hover {
+  color: rgb(78, 58, 58);
+  background-color: rgb(238, 215, 215);
+}
+#start:focus {
+  outline: none;
+}
+#start:hover {
+  min-height: 32px;
+  min-width: 105px;
+  color: rgb(78, 58, 58);
+  background-color: rgb(238, 215, 215);
+}
+
+.winner {
+  background-color: #cf9c2d;
+}
+
+.winner .playerName {
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Media queries */
+
+@media only screen and (max-height: 500px), (max-width: 1000px) {
+  header {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  .playerName {
+    font-size: 2em;
+  }
+  .totalScore {
+    font-size: 2em;
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .playerTotalScore {
+    font-size: 1em;
+  }
+  #currentScore0,
+  #currentScore1 {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (min-height: 501px) and (min-width: 1000px) {
+  header {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  .playerName {
+    font-size: 3em;
+  }
+  .totalScore {
+    font-size: 3em;
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .playerTotalScore {
+    font-size: 1em;
+  }
+  .button {
+    min-height: 50px;
+    min-width: 150px;
+    height: 50%;
+    width: 50%;
+    padding-top: 10%;
+  }
+
+  #currentScore0,
+  #currentScore1 {
+    font-size: 2em;
+  }
+  .playerCurrent {
+    font-size: 1.3em;
+  }
+  #instructions > h1 {
+    height: 10%;
+    font-size: 2em;
+  }
+
+  #instructions-body {
+    height: 80%;
+    font-size: 1.2em;
+    line-height: 120%;
+  }
+  #start {
+    height: 10%;
+    border-radius: 10px;
+  }
+  ul {
+    margin: 10px;
+  }
+  li {
+    font-size: 70%;
+  }
+}

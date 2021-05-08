@@ -1,0 +1,66 @@
+html {
+  min-height: 1100px;
+}
+
+#slogan {
+  margin-bottom: 30px;
+}
+
+#center {
+  padding-top: 200px;
+}
+
+.title {
+  font-size: 2em;
+  font-family: myNotoBold;
+}
+
+.description {
+  font-size: 1.5em;
+  font-style: italic;
+  opacity: 65%;
+}
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+}
+
+.projectImage {
+  width: 100%;
+  padding: 10px;
+  opacity: 60%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+@media only screen and (max-width: 700px) {
+  html {
+    min-height: 900px;
+  }
+
+  .title {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .description {
+    font-size: 1.25em;
+    font-style: italic;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  html {
+    min-height: 1350px;
+  }
+}
